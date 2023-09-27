@@ -1,12 +1,13 @@
 //your JS code here. If required.
 
-function updateTimer(){
-	const time=document.getElementById("timer");
-	const currentdate=new Date();
+function updateDateTimer() {
+    const dateTimerElement = document.getElementById('timer');
+    const currentDate = new Date();
+    const formattedDateTime = currentDate.toLocaleString(); // Get a formatted date and time string
 
-	const formatted=currentdate.toLocaleTimeString();
-
-	time.textcontent=formatted;
+    dateTimerElement.textContent = formattedDateTime; // Update the container with the formatted date and time
 }
-updateTimer();
-setInterval(updateTimer,1000)
+
+// Update the date timer immediately and then every second
+updateDateTimer();
+setInterval(updateDateTimer, 1000);
